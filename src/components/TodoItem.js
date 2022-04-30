@@ -3,12 +3,12 @@ import React from "react"
 function TodoItem(props) {
   return (
     <li>
-<input
+      <input
   type="checkbox"
-  checked={props.todo.completed}
-  onChange={() => props.handleChangeProps(this.props.todo.id)}
-  />    </li>
-
+  checked={this.props.todo.completed}
+  onChange={() => console.log("clicked")}
+/>
+    </li>
   )}
 
 export default TodoItem
