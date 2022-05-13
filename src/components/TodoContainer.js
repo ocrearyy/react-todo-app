@@ -1,35 +1,39 @@
-import React from "react"
-import TodosList from "./TodosList"
-import Header from "./Header"
-
+import React from 'react';
+import TodosList from './TodosList';
+import Header from './Header';
 
 class TodoContainer extends React.Component {
-    state = {
+  constructor() {
+    super();
+    this.state = {
       todos: [
         {
           id: 1,
-          title: "setup development environment",
-          completed: true
+          title: 'setup development environment',
+          completed: true,
         },
         {
           id: 2,
-          title: "Develop website and add content",
-          completed: false
+          title: 'Develop website and add content',
+          completed: false,
         },
         {
           id: 3,
-          title: "Deploy to live server",
-          completed: false
-        }
-      ]
+          title: 'Deploy to live server',
+          completed: false,
+        },
+      ],
     };
-    render() {
-      return (
-        <div>
+  }
+
+  render() {
+    const { todos } = this.state;
+    return (
+      <div>
         <Header />
-        <TodosList todos={this.state.todos} />
+        <TodosList todos={todos} />
       </div>
-      );
+    );
   }
 }
 

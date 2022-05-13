@@ -1,14 +1,18 @@
-import React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function TodoItem(props) {
+function TodoItem({ todo }) {
   return (
     <li>
       <input
-  type="checkbox"
-  checked={this.props.todo.completed}
-  onChange={() => console.log("clicked")}
-/>
+        type="checkbox"
+        checked={todo.completed}
+        onChange={() => console.log('clicked')}
+      />
     </li>
-  )}
+  );
+}
 
-export default TodoItem
+TodoItem.propTypes = { todo: PropTypes.string.isRequired };
+
+export default TodoItem;
